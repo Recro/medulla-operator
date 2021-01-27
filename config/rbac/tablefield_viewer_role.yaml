@@ -1,0 +1,20 @@
+# permissions for end users to view tablefields.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: tablefield-viewer-role
+rules:
+- apiGroups:
+  - apps.medulla.io
+  resources:
+  - tablefields
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - apps.medulla.io
+  resources:
+  - tablefields/status
+  verbs:
+  - get

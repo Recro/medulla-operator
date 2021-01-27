@@ -2,6 +2,19 @@ domain: medulla.io
 layout: go.kubebuilder.io/v3
 projectName: medulla-operator
 repo: github.com/Recro/medulla-operator
+resources:
+- crdVersion: v1
+  group: apps
+  kind: Application
+  version: v1alpha1
+- crdVersion: v1
+  group: apps
+  kind: Table
+  version: v1alpha1
+- crdVersion: v1
+  group: apps
+  kind: TableField
+  version: v1alpha1
 version: 3-alpha
 plugins:
   manifests.sdk.operatorframework.io/v2: {}
